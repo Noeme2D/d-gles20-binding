@@ -30,7 +30,6 @@ module derelict.gles.gles2;
 public {
     import derelict.gles.types2;
     import derelict.gles.constants2;
-    import derelict.gles.ext2;
     import derelict.gles.functions2;
 }
 
@@ -52,7 +51,6 @@ alias GLESSymbolLoader = void* function(string);
 class DerelictGLES2Loader : SharedLibLoader {
     private {
         GLESVersion _loadedVersion;
-        GLESSymbolLoader _symLoader;
     }
 
     public {
@@ -65,19 +63,11 @@ class DerelictGLES2Loader : SharedLibLoader {
         }
 
         GLESVersion reload() {
-            loadEXT(  );
-
             return _loadedVersion;
         }
 
-        void load(GLESSymbolLoader loader) {
-            _symLoader = loader;
-            loadSymbols();
-        }
-
         protected override void* loadSymbol(string name, bool doThrow = true) {
-            if(_symLoader) return _symLoader(name);
-            else return super.loadSymbol(name, doThrow);
+            return super.loadSymbol(name, doThrow);
         }
 
         protected override void loadSymbols() {

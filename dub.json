@@ -1,17 +1,31 @@
 {
-    "name": "derelict-gles",
-    "description": "A dynamic binding to the OpenGL ES library.",
-    "homepage": "https://github.com/DerelictOrg/DerelictGLES",
-    "license": "Boost",
-    "authors": [
-        "Ben Boeckel",
-        "Mike Parker"
-    ],
-
-    "targetName": "DerelictGLES",
-    "targetPath": "lib",
-
-    "dependencies": {
-        "derelict-util": "~>2.0.1"
-    }
+	"authors": [
+		"Ben Boeckel",
+		"Mike Parker",
+		"Leo Li",
+		"Ruiqi Niu"
+	],
+	"configurations": [
+		{
+			"name": "library",
+			"targetType": "staticLibrary"
+		}
+	],
+	"dependencies": {
+		"derelict-util": "~>3.0.0-beta.2"
+	},
+	"description": "A dynamic binding to OpenGL ES 2.0 for the D Programming Language.",
+	"homepage": "https://github.com/Noeme2D/d-gles20-binding",
+	"importPaths": [
+		"source/"
+	],
+	"license": "Boost",
+	"name": "d-gles20-binding",
+	"sourcePaths": [
+		"source/"
+	],
+	"targetName": "DerelictGLES",
+	"targetPath": "lib",
+	"targetType": "staticLibrary",
+	"version": "1.0.0"
 }
