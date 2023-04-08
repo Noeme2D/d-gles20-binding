@@ -19,7 +19,7 @@
 	"importPaths": [
 		"source/"
 	],
-	"license": "Boost",
+	"license": "BSD 2-clause",
 	"name": "d-gles20-binding",
 	"sourcePaths": [
 		"source/"

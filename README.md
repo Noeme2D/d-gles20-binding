@@ -1,12 +1,37 @@
-DerelictGLES
+d-gles20-binding
 =============
 
-A dynamic binding to [OpenGL ES][1] for the D Programming Language.
+Usage:
 
-For information on how to build DerelictGLES and link it with your programs, please see the post [Using Derelict][2] at The One With D.
+`dub.sdl`:
 
-For information on how to load the OpenGL ES library via DerelictGLES, see the page [DerelictUtil for Users][3] at the DerelictUtil Wiki. 
+```
+dependency "d-gles20-binding" repository="git+https://github.com/Noeme2D/d-gles20-binding.git" version="<commit hash, 7-40 chars>"
+```
 
-[1]: http://www.khronos.org/opengles/
-[2]: http://dblog.aldacron.net/derelict-help/using-derelict/
-[3]: https://github.com/DerelictOrg/DerelictUtil/wiki/DerelictUtil-for-Users
+`dub.json`:
+
+```json
+"dependencies": {
+    "d-gles20-binding": {
+        "repository": "git+https://github.com/Noeme2D/d-gles20-binding.git",
+        "version": "<commit hash, 7-40 chars>"
+    }
+}
+```
+
+Then:
+
+```d
+import derelict.gles.gles2;
+```
+
+for both your main and all sources that make GL calls.
+
+Finally in the main:
+
+```d
+DerelictGLES2.load();
+```
+
+__after__ a GL context is created and made current.

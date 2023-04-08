@@ -25,6 +25,14 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
 */
+
+/*
+    d-gles20-binding
+    Copyright © 2023, Noeme2D Workgroup
+    Distributed under the 2-Clause BSD License, see LICENSE file.
+    
+    Authors: Leo Li, Ruiqi Niu
+*/
 module derelict.gles.gles2;
 
 public {
